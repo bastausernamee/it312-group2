@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 20px;
+}
+h2, h3 { color: #333; }
+a { color: #007bff; 
+    text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, input[type=submit] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+.view {
+    background: #28a745;
+}
+.delete {
+    background: #dc3545;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background: #007bff;
+    color: white;
+}
+tr:hover { background: #f1f1f1; }
+.notif-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+}
+.notif-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+.notif-container {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 15px;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.new-label { color: red; font-weight: bold; }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content, .notifmodal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    animation: slideDown 0.3s ease;
+
+}
+.notifmodal-content{
+    width: 70%;
+}
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.close {
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+.close:hover { color: red; }
+.modal .close {
+    color: #da2525;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.action-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.read-btn { background-color: #28a745; }
+.unread-btn { background-color: #ffc107; color: black; }
+.delete-btn { background-color: #dc3545; }
+.action-btn:hover { opacity: 0.85; }
+
+ /* Ensure long complaint text wraps properly */
+#complaintModalBody, #singleFeedbackBody{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 600px;
+}
+
+/* Character counter style */
+#charCount {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 4px;
+}
+
+/* Toast container */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateX(150%);
+    transition: all 0.4s ease;
+    z-index: 9999;
+    min-width: 250px;
+}
+
+/* Toast visible state */
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Progress bar container */
+.toast .progress {
+    width: 100%;
+    height: 5px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+/* Animated fill bar */
+.toast .progress-bar {
+    height: 100%;
+    background: #fff;
+    width: 0%;
+    animation: fillBar 3s linear forwards;
+}
+
+/* Keyframes for progress */
+@keyframes fillBar {
+    from { width: 0%; }
+    to { width: 100%; }
+}
