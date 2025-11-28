@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms>
+    
+    <!-- CSS STYLING DEFINITIONS -->
+    <styles>
+        <style name="form-wrapper">form-container</style>
+        <style name="label">form-label</style>
+        <style name="input">form-input</style>
+        <style name="button">form-button</style>
+    </styles>
+
+    <!-- REGISTER FORM -->
+    <form name="register">
+        <field>
+            <label>Username</label>
+            <name>username</name>
+            <type>text</type>
+            <css>input</css>
+            <placeholder>Enter your username</placeholder>
+        </field>
+
+        <field>
+            <label>Password</label>
+            <name>password</name>
+            <type>password</type>
+            <css>input</css>
+            <placeholder>Enter your password</placeholder>
+        </field>
+
+      <field>
+        <label>Email</label>
+        <name>email</name>
+        <type>email</type>
+        <css>input</css>
+        <placeholder>example@gmail.com</placeholder>
+        <pattern>^[a-zA-Z0-9._%+-]+@gmail\.com$</pattern>
+    </field>
+
+
+
+        <button-class>button</button-class>
+    </form>
+
+    <!-- LOGIN FORM -->
+    <form name="login">
+        <field>
+            <label>Username</label>
+            <name>username</name>
+            <type>text</type>
+            <css>input</css>
+        </field>
+
+        <field>
+            <label>Password</label>
+            <name>password</name>
+            <type>password</type>
+            <css>input</css>
+        </field>
+
+        <button-class>button</button-class>
+    </form>
+
+   <form name="complaint">
+        <field>
+            <label>Complaint</label>
+            <name>message</name>
+            <type>textarea</type>
+            <rows>20</rows>
+            <cols>50</cols>
+            <required>true</required>
+            <maxlength>5000</maxlength>
+        </field>
+        <field>
+            <label>Submit Anonymously</label>
+            <name>anonymous</name>
+            <type>checkbox</type>
+            <value>1</value>
+        </field>
+    </form>
+</forms>
